@@ -11,8 +11,11 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
+import QRCode from 'qrcode';
+
 export default {
 	async fetch(request, env, ctx): Promise<Response> {
-		return new Response('Hello World!');
+		let data = await QRCode.toBuffer('https://github.com');
+		return new Response(data.toString('base64'));
 	},
 } satisfies ExportedHandler<Env>;
