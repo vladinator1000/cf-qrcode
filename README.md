@@ -1,6 +1,6 @@
 # cf-qrcode
 
-Bug reprodcution for https://github.com/soldair/node-qrcode.
+Bug reprodcution for https://github.com/soldair/node-qrcode/issues/376.
 
 The library doesn't work on Cloudflare event with the compatibility flags in wrangler.toml:
 `compatibility_flags = ["nodejs_compat_v2"]`
